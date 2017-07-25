@@ -1,0 +1,29 @@
+<h1><label>Welcome to Job Portal</label></h1>
+
+
+<div class="container" style="margin-top: 15%">
+
+    <div class="row">
+        <div class="col-md-offset-6 col-md-3">
+
+            <div class="form-login">
+                <label>Username:</label>
+                <input type="text" placeholder="username" ng-model="uname" class="form-control input-md chat-input"/>
+                </br>
+                <label>Password:</label>
+                <input type="password" placeholder="password" ng-model="password" class="form-control input-md chat-input"/>
+                </br>
+                <div class="wrapper">
+            <span class="group-btn">
+                <button ng-click="verify()" class="btn btn-primary">Login</button>
+            </span>
+                    <span class="group-btn">
+                <button ng-click="register()" class="btn btn-primary">Register</button>
+            </span>
+                </div>
+            </div>
+            <br><p ng-show="alrt === 0" style="color:red">invalid login</p>
+
+        </div>
+    </div>
+</div>

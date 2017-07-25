@@ -1,0 +1,49 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+label{
+    color:aqua;
+}
+
+body {
+    font-family: Cambria;
+    background-image: url("images/thunderstorm-2445402_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+
+h1{
+
+    text-align: center;
+}
+
+
+
+#table  {
+    font-family: Cambria;
+    border-collapse: collapse;
+    padding-bottom: 500px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    max-width: 15%;
+    text-align: left;
+    padding: 8px;
+    background-color: black;
+    color: white;
+}
+
+th{
+    color:darkturquoise;
+}
+tr:nth-child(even) {
+    background-color: red;
+}
+strong {
+    background-color: black;
+    color: darkturquoise;
+}

@@ -1,0 +1,15 @@
+<h2>Profile</h2><span>                                 <button ng-click="prof()">Home</button></span>
+<div>
+    First Name: <input type="text" name="firstname" ng-model="firstname"/> </div> <br />
+<div> Last Name: <input type="text" name="lastname" ng-model="lastname"/> </div><br />
+<div> User Name: <input type="text" name="username" ng-model="username"/> </div><br />
+<div> Password: <input type="password" name="password" ng-model="password"/> </div><br />
+<div>Email: <input type="text" name="email" ng-model="email"/></div> <br />
+<div>Location: <input type="text" name="location" ng-model="location"/></div> <br />
+<div>Phone: <input type="text" name="phone" ng-model="phone"/></div> <br />
+<div>Gender: <input type="radio" ng-model="gender" value="male" class="gender" id="male"> Male
+    <input type="radio" ng-model="gender" value="female" class="gender" id="female"> Female
+</div>
+<br />
+<button ng-click="update()">update</button>
+<div ng-show="updateflag"> Profile updated successfully </div>

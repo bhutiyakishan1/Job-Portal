@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <form name="myForm" class="col-md-4" ng-submit="reg(myForm.$valid)" novalidate>
+            <!--<div class="form-group">-->
+            <!--<label> First Name: </label>-->
+            <!--<input name="firstname" class="form-control" ng-model="firstname" required/>-->
+            <!--<span ng-show="myForm.firstname.$invalid && myForm.firstname.$pristine && submitted"> Please enter firstname </span>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+            <!--<label> Last Name: </label>-->
+            <!--<input name="lastname" class="form-control" ng-model="lastname" required/>-->
+            <!--<span ng-show="myForm.lastname.$invalid && myForm.lastname.$pristine && submitted"> Please enter lastname </span>-->
+            <!--</div>-->
+            <div class="form-group">
+                <label> User Name: </label>
+                <input name="username" class="form-control" ng-model="username" required/>
+                <span ng-show="myForm.username.$invalid && myForm.username.$pristine && submitted"> Please enter username </span>
+            </div>
+            <div class="form-group">
+                <label> Password: </label>
+                <input type="password" name="password" class="form-control" ng-model="password" required/>
+                <span ng-show="myForm.password.$invalid && myForm.password.$pristine && submitted"> Please enter password </span>
+            </div>
+            <div class="form-group">
+                <label> Email: </label>
+                <input name="email" class="form-control" ng-model="email" type="email" required/>
+                <span ng-show="myForm.email.$invalid && submitted"> Please enter email </span>
+            </div>
+            <div class="form-group">
+                <label> Location: </label>
+                <input type="text" name="location" class="form-control" ng-model="location" required/>
+                <span ng-show="myForm.location.$invalid && myForm.location.$pristine && submitted"> Please enter location </span>
+            </div>
+            <div class="form-group">
+                <label> Phone: </label>
+                <input type="number" name="phone" class="form-control" ng-model="phone" ng-minlength="10" ng-maxlength="10" required/>
+                <span ng-show="(myForm.phone.$error.required || myForm.phone.$error.number) && submitted">
+         Valid phone number is required
+       </span>
+                <span ng-show="((myForm.phone.$error.minlength || myForm.phone.$error.maxlength) && myForm.phone.$dirty && submitted)">
+         phone number should be 10 digits
+       </span>
+            </div>
+            <div>
+                <label> User Type: </label> <br />
+                <label class="radio-inline"><input type="radio" ng-model="gender" value="company" ng-required="!color">  company </label>
+                <label class="radio-inline"><input type="radio" ng-model="gender" value="job-seeker" ng-required="!color"> job-seeker </label>
+            </div>
+            <br />
+            <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

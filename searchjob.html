@@ -1,0 +1,28 @@
+<div class="row" style="margin-top: 3%">
+    <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Search by job-title" ng-model="searchFish.jobtitle">
+    </div>
+    <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Search by keywords" ng-model="searchFish.keywords">
+    </div>
+    <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Search by location" ng-model="searchFish.location">
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-primary" ng-click="reset()">reset</button>
+    </div>
+</div>
+<br>
+    </br>
+
+<table class="table table-bordered table-hover">
+    <tr><th>Job Title</th><th>Keywords</th><th>Location</th><th>Job Description</th></tr>
+    <tr ng-repeat="message in messages | orderBy:sortType:sortReverse | filter: searchFish">
+        <td>{{message.jobtitle}}</td>
+        <td>{{message.keywords}}</td>
+        <td>{{message.location}}</td>
+        <td>{{message.jobdescription}}</td>
+    </tr>
+</table>
+</div>
+<button ng-click="back()">back</button>
